@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style-Mart</title>
+</head>
+<body>
+    <header>
+        <p class="e_logo">STYLE <span>MART</span></p>
+        <div class="itemList" onclick="listShow(event)">
+            <i class="fa-solid fa-bars"></i>
+            <p class="text1">CATEGORY</p> 
+        </div>
+            <ul id="itemContainer" class="hidden">
+                <li><a href="#fashion"><i class="fa-solid fa-shirt"></i>Fashion</a></li>
+                <li><a href="#mobiles"><i class="fa-solid fa-mobile"></i>Mobiles</a></li>
+                <li><a href="#electronics"><i class="fa-solid fa-laptop"></i>Electronics</a></li>
+                <li><a href="#home-appliances"><i class="fa-solid fa-house-chimney"></i>Home Appliances</a></li>
+                <li><a href="#toys&games"><i class="fa-solid fa-gamepad"></i>Toys & Games</a></li>
+            </ul>
+        <div class="profile_icon">
+            <div class="p_icon" onclick="wishlistShow(event)">
+               <i class="fa-regular fa-heart"></i>
+               <p class="text2">Wishlist</p>
+            </div>
+            <div class="cartIcon" onclick="cartShow(event)">
+               <i class="fa-solid fa-cart-shopping"></i>
+               <p class="text2">My Cart</p>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div id="wishlistContainer" class="wishlistHidden">
+             <h2 class="cart-head">YOUR WISHLIST ITEMS</h2>
+            <p class="empty">Your List Is Empty</p>
+
+            <i class="fa-solid fa-xmark" onclick="wishlistShow(event)" id="wishlistx"></i>
+        </div>
+        <div id="cart-container" class="cartHidden">
+            <h2 class="cart-head">YOUR CART ITEMS</h2>
+            <p class="empty">Your Cart Is Empty</p>
+            <i class="fa-solid fa-xmark" onclick="cartShow(event)" id="cartx"></i>
+        </div>
+        <div class="short_link_container">
+            <a class="short_link" href="#allProduct" target="blank">All PRODUCT</a>
+            <a class="short_link" href="#mens-wear" target="blank">MEN'S WEAR</a>
+            <a class="short_link" href="#womens-wear" target="blank">WOMEN'S WEAR</a>
+            <a class="short_link" href="#mobiles" target="blank">ALL MOBILE'S</a>
+            <a class="short_link" href="#toys&games" target="blank">GAMES & TOYS</a>
+        </div>
+        <div id="offers_portion">
+            <div class="offer_text">
+                <p class="offer_text1">NEW TRENDING<br>MEN'S WEAR</p>
+                <p class="offer_text2">-70% DISCOUNT</p>
+            </div>
+            <img src="fashion1.png" class="f_img1">
+        </div>
+        <section id="allProduct">
+            <section id="fashion">
+            <section id="mens-wear">
+            <p class="section-names">Mens Wears</p>
+            <div class="wears">
+                <div id="p1" class="product">
+                    <div class="product_img_div">
+                        <img src="combo1-1.png" class="product_imgs">
+                        <i class="fa-solid fa-heart" onclick="addToWishlist('combo1-1.png','Men Shirt And Pant Combo',1199,'fa-solid fa-shopping-bag')"></i>
+                    </div>
+                    <p class="product_name">Men Shirt And Pant Combo</p>
+                    <div class="product_p_c">
+                        <p  class="product_price">price:₹1199</p>
+                        <i class="fa-solid fa-shopping-bag" onclick="addToCart('combo1-1.png','Men Shirt And Pant Combo',1199)"></i>
+                    </div>
+                </div>
+                <div id="p2" class="product">
+                    <div class="product_img_div">
+                        <img src="fashion1.png" class="product_imgs">
+                        <i class="fa-solid fa-heart" onclick="addToWishlist('fashion1.png','Urban Shadow Graphic Jogger Set',999,'fa-solid fa-shopping-bag')"></i>
+                    </div>
+                    <p class="product_name">Urban Shadow Graphic Jogger Set</p>
+                    <div class="product_p_c">
+                        <p  class="product_price">price:₹999</p>
+                        <i class="fa-solid fa-shopping-bag" onclick="addToCart('fashion1.png','Urban Shadow Graphic Jogger Set',999)"></i>
+                    </div>
+                </div>
+                <div id="p3" class="product">
+                    <div class="product_img_div">
+                        <img src="hoodie1.png" class="product_imgs">
+                        <i class="fa-solid fa-heart" onclick="addToWishlist('hoodie1.png','Beige Active Graphic Hoodie',899,'fa-solid fa-shopping-bag')"></i>
+                    </div>
+                    <p class="product_name">Beige Active Graphic Hoodie</p>
+                    <div class="product_p_c">
+                        <p  class="product_price">price:₹899</p>
+                        <i class="fa-solid fa-shopping-bag" onclick="addToCart('hoodie1.png','Beige Active Graphic Hoodie',899)"></i>
+                     </div>
+                </div>
+                <div id="p4" class="product">
+                    <div class="product_img_div">
+                        <img src="jeans.png" class="product_imgs">
+                        <i class="fa-solid fa-heart" onclick="addToWishlist('jeans.png','Grey Loose Fit Denim Jeans',999,'fa-solid fa-shopping-bag')"></i>
+                    </div>
+                    <p class="product_name">Grey Loose Fit Denim Jeans</p>
+                    <div class="product_p_c">
+                        <p  class="product_price">price:₹999</p>
+                        <i class="fa-solid fa-shopping-bag" onclick="addToCart('jeans.png','Grey Loose Fit Denim Jeans',999)"></i>
+                    </div>
+                </div>
+                <div id="p5" class="product">
+                    <div class="product_img_div">
+                        <img src="casual-shirt1.png" class="product_imgs">
+                        <i class="fa-solid fa-heart" onclick="addToWishlist('casual-shirt1.png','Classic Brown Utility Overshirt',899,'fa-solid fa-shopping-bag')"></i>
+                    </div>
+                    <p class="product_name">Classic Brown Utility Overshirt</p>
+                    <div class="product_p_c">
+                        <p  class="product_price">price:₹599</p>
+                        <i class="fa-solid fa-shopping-bag" onclick="addToCart('casual-shirt1.png','Classic Brown Utility Overshirt',899)"></i>
+                    </div>
+                </div>
+                <div id="p6" class="product">
+                    <div class="product_img_div">
+                        <img src="cargo-pant.png" class="product_imgs">
+                        <i class="fa-solid fa-heart" onclick="addToWishlist('cargo-pant.png','Men’s Light Grey Cargo Jogger Pants',699,'fa-solid fa-shopping-bag')"></i>
+                    </div>
+                    <p class="product_name">Men’s Light Grey Cargo Jogger Pants</p>
+                    <div class="product_p_c">
+                        <p  class="product_price">price:₹699</p>
+                        <i class="fa-solid fa-shopping-bag" onclick="addToCart('cargo-pant.png','Men’s Light Grey Cargo Jogger Pants',699)"></i>
+                    </div>
+                </div>
+            </div>
+            </section>
+            <section id="womens-wear">
+            <p class="section-names">Womens Wears</p>
+            <div class="wears">
+                <div id="p7" class="product">
+                    <div class="product_img_div">
+                        <img src="saree.png" class="product_imgs">
+                        <i class="fa-solid fa-heart" onclick="addToWishlist('saree.png','Teal & Tangerine Silk Saree Set',2999,'fa-solid fa-shopping-bag')"></i>
+                    </div>
+                    <p class="product_name">Teal & Tangerine Silk Saree Set</p>
+                    <div class="product_p_c">
+                        <p  class="product_price">price:₹2999</p>
+                        <i class="fa-solid fa-shopping-bag" onclick="addToCart('saree.png','Teal & Tangerine Silk Saree Set',2999)"></i>
+                    </div>
+                </div>
+                <div id="p8" class="product">
+                    <div class="product_img_div">
+                        <img src="kurti.png" class="product_imgs">
+                        <i class="fa-solid fa-heart" onclick="addToWishlist('kurti.png','Geometric Kurti Pant Set',899,'fa-solid fa-shopping-bag')"></i>
+                    </div>
+                    <p class="product_name">Geometric Kurti Pant<br>Set</p>
+                    <div class="product_p_c">
+                        <p  class="product_price">price:₹899</p>
+                        <i class="fa-solid fa-shopping-bag" onclick="addToCart('kurti.png','Geometric Kurti Pant<br> Set',899)"></i>
+                    </div>
+                </div>
+                <div id="p9" class="product">
+                    <div class="product_img_div">
+                        <img src="midi-dress.png" class="product_imgs">
+                        <i class="fa-solid fa-heart" onclick="addToWishlist('midi-dress.png','Floral Elegance Midi Dress',1499,'fa-solid fa-shopping-bag')"></i>
+                    </div>
+                    <p class="product_name">Floral Elegance Midi<br>Dress</p>
+                    <div class="product_p_c">
+                        <p  class="product_price">price:₹1499</p>
+                        <i class="fa-solid fa-shopping-bag" onclick="addToCart('midi-dress.png','Floral Elegance Midi Dress',1499)"></i>
+                     </div>
+                </div>
+                <div id="p10" class="product">
+                    <div class="product_img_div">
+                        <img src="Culotte-dress.png" class="product_imgs">
+                        <i class="fa-solid fa-heart" onclick="addToWishlist('Culotte-dress.png','Clementine Ruffle-Front Culotte Suit Set',1699,'fa-solid fa-shopping-bag')"></i>
+                    </div>
+                    <p class="product_name">Clementine Ruffle-Front Culotte Suit Set</p>
+                    <div class="product_p_c">
+                        <p  class="product_price">price:₹1699</p>
+                        <i class="fa-solid fa-shopping-bag" onclick="addToCart('Culotte-dress.png','Clementine Ruffle-Front Culotte Suit Set',1699)"></i>
+                    </div>
+                </div>
+                <div id="p11" class="product">
+                    <div class="product_img_div">
+                        <img src="gowns.png" class="product_imgs">
+                        <i class="fa-solid fa-heart" onclick="addToWishlist('gowns.png','Zari-Embroidered Lime Green Anarkali Set',1299,'fa-solid fa-shopping-bag')"></i>
+                    </div>
+                    <p class="product_name">Zari-Embroidered Lime Green Anarkali Set</p>
+                    <div class="product_p_c">
+                        <p  class="product_price">price:₹1299</p>
+                        <i class="fa-solid fa-shopping-bag" onclick="addToCart('gowns.png','Zari-Embroidered Lime Green Anarkali Set',1299)"></i>
+                    </div>
+                </div>
+                <div id="p12" class="product">
+                    <div class="product_img_div">
+                        <img src="high-low-dress.png" class="product_imgs">
+                        <i class="fa-solid fa-heart" onclick="addToWishlist('high-low-dress.png','Indigo Paisley Paradise High-Low Dress',999,'fa-solid fa-shopping-bag')"></i>
+                    </div>
+                    <p class="product_name">Indigo Paisley Paradise High-Low Dress</p>
+                    <div class="product_p_c">
+                        <p  class="product_price">price:₹999</p>
+                        <i class="fa-solid fa-shopping-bag" onclick="addToCart('high-low-dress.png','Indigo Paisley Paradise High-Low Dress',999)"></i>
+                    </div>
+                </div>
+            </div>    
+            </section>
+            </section>
+            <section id="mobiles">
+            <p class="section-names">Mobiles</p>
+            <div class="wears">
+                <div id="p13" class="product">
+                    <div class="product_img_div">
+                        <img src="iphone-17-pro-max.png" class="product_imgs">
+                        <i class="fa-solid fa-heart" onclick="addToWishlist('iphone-17-pro-max.png','Apple iPhone 17 pro(Cosmic Orange)',149500,'fa-solid fa-shopping-bag')"></i>
+                    </div>
+                    <p class="product_name">Apple iPhone 17 pro(Cosmic Orange)</p>
+                    <div class="product_p_c">
+                        <p  class="product_price">price:₹149500</p>
+                        <i class="fa-solid fa-shopping-bag" onclick="addToCart('iphone-17-pro-max.png','Apple iPhone 17 pro(Cosmic Orange)',149500)"></i>
+                    </div>
+                </div>
+                <div id="p14" class="product">
+                    <div class="product_img_div">
+                        <img src="samsung-s25-ultra.png" class="product_imgs">
+                        <i class="fa-solid fa-heart" onclick="addToWishlist('samsung-s25-ultra.png','Samsung Galaxy S25 Ultra 5G',141999,'fa-solid fa-shopping-bag')"></i>
+                    </div>
+                    <p class="product_name">Samsung Galaxy <br>S25 Ultra 5G</p>
+                    <div class="product_p_c">
+                        <p  class="product_price">price:₹141999</p>
+                        <i class="fa-solid fa-shopping-bag" onclick="addToCart('samsung-s25-ultra.png','Samsung Galaxy S25 Ultra 5G',141999)"></i>
+                    </div>
+                </div>
+                <div id="p15" class="product">
+                    <div class="product_img_div">
+                        <img src="nothing-phone.png" class="product_imgs">
+                        <i class="fa-solid fa-heart" onclick="addToWishlist('nothing-phone.png','Nothing Phone (3) (Black, 512 GB)',89999,'fa-solid fa-shopping-bag')"></i>
+                    </div>
+                    <p class="product_name">Nothing Phone (3)<br>(Black, 512 GB)</p>
+                    <div class="product_p_c">
+                        <p  class="product_price">price:₹89999</p>
+                        <i class="fa-solid fa-shopping-bag" onclick="addToCart('nothing-phone.png','Nothing Phone (3) (Black, 512 GB)',89999)"></i>
+                     </div>
+                </div>
+                <div id="p16" class="product">
+                    <div class="product_img_div">
+                        <img src="infinix-zero-40.png" class="product_imgs">
+                        <i class="fa-solid fa-heart" onclick="addToWishlist('infinix-zero-40.png','Infinix Zero 40 5G (Violet Garden)',30999,'fa-solid fa-shopping-bag')"></i>
+                    </div>
+                    <p class="product_name">Infinix Zero 40 5G<br>(Violet Garden)</p>
+                    <div class="product_p_c">
+                        <p  class="product_price">price:₹30999</p>
+                        <i class="fa-solid fa-shopping-bag" onclick="addToCart('infinix-zero-40.png','Infinix Zero 40 5G (Violet Garden)',30999)"></i>
+                    </div>
+                </div>
+                <div id="p17" class="product">
+                    <div class="product_img_div">
+                        <img src="realme-p4-5g.png" class="product_imgs">
+                        <i class="fa-solid fa-heart" onclick="addToWishlist('realme-p4-5g.png','realme P4 Power 5G (TransOrange)',26999,'fa-solid fa-shopping-bag')"></i>
+                    </div>
+                    <p class="product_name">realme P4 Power 5G<br>(TransOrange)</p>
+                    <div class="product_p_c">
+                        <p  class="product_price">price:₹26999</p>
+                        <i class="fa-solid fa-shopping-bag" onclick="addToCart('realme-p4-5g.png','realme P4 Power 5G (TransOrange)',26999)"></i>
+                    </div>
+                </div>
+                <div id="p18" class="product">
+                    <div class="product_img_div">
+                        <img src="redmi-15a.png" class="product_imgs">
+                        <i class="fa-solid fa-heart" onclick="addToWishlist('redmi-15a.png','REDMI 15A (Awesome Blue)',12999,'fa-solid fa-shopping-bag')"></i>
+                    </div>
+                    <p class="product_name">REDMI 15A <br>(Awesome Blue)</p>
+                    <div class="product_p_c">
+                        <p  class="product_price">price:₹12999</p>
+                        <i class="fa-solid fa-shopping-bag" onclick="addToCart('redmi-15a.png','REDMI 15A (Awesome Blue)',12999)"></i>
+                    </div>
+                </div>
+            </div>
+            </section>
+            <section id="electronics">
+                <p class="section-names">Electronics</p>
+                <div class="wears">
+                <div id="p19" class="product">
+                    <div class="product_img_div">
+                        <img src="hp-laptop.png" class="product_imgs">
+                        <i class="fa-solid fa-heart" onclick="addToWishlist('hp-laptop.png','HP Victus Intel Core i5 13th Gen 13420H',77499,'fa-solid fa-shopping-bag')"></i>
+                    </div>
+                    <p class="product_name">HP Victus Intel Core i5 13th Gen 13420H</p>
+                    <div class="product_p_c">
+                        <p  class="product_price">price:₹77499</p>
+                        <i class="fa-solid fa-shopping-bag" onclick="addToCart('hp-laptop.png','HP Victus Intel Core i5 13th Gen 13420H',77499)"></i>
+                    </div>
+                </div>
+                <div id="p20" class="product">
+                    <div class="product_img_div">
+                        <img src="power-bank.png" class="product_imgs">
+                        <i class="fa-solid fa-heart" onclick="addToWishlist('power-bank.png','misspro 200000 mAh 18 W Power Bank ',1199,'fa-solid fa-shopping-bag')"></i>
+                    </div>
+                    <p class="product_name">misspro 200000 mAh<br>18 W Power Bank </p>
+                    <div class="product_p_c">
+                        <p  class="product_price">price:₹1199</p>
+                        <i class="fa-solid fa-shopping-bag" onclick="addToCart('power-bank.png','misspro 200000 mAh 18 W Power Bank ',1199)"></i>
+                    </div>
+                </div>
+                <div id="p21" class="product">
+                    <div class="product_img_div">
+                        <img src="smart-watch.png" class="product_imgs">
+                        <i class="fa-solid fa-heart" onclick="addToWishlist('smart-watch.png','Huawei Sports mode Smartwatch ',9999,'fa-solid fa-shopping-bag')"></i>
+                    </div>
+                    <p class="product_name">Huawei Sports mode Smartwatch </p>
+                    <div class="product_p_c">
+                        <p  class="product_price">price:₹9999</p>
+                        <i class="fa-solid fa-shopping-bag" onclick="addToCart('smart-watch.png','Huawei Sports mode Smartwatch ',9999)"></i>
+                     </div>
+                </div>
+                <div id="p22" class="product">
+                    <div class="product_img_div">
+                        <img src="ear-buds.png" class="product_imgs">
+                        <i class="fa-solid fa-heart" onclick="addToWishlist('ear-buds.png','Bose QuietComfort Earbuds Bluetooth ',14499,'fa-solid fa-shopping-bag')"></i>
+                    </div>
+                    <p class="product_name">Bose QuietComfort Earbuds Bluetooth </p>
+                    <div class="product_p_c">
+                        <p  class="product_price">price:₹14499</p>
+                        <i class="fa-solid fa-shopping-bag" onclick="addToCart('ear-buds.png','Bose QuietComfort Earbuds Bluetooth ',14499)"></i>
+                    </div>
+                </div>
+                <div id="p23" class="product">
+                    <div class="product_img_div">
+                        <img src="canon-camera.png" class="product_imgs">
+                        <i class="fa-solid fa-heart" onclick="addToWishlist('canon-camera.png','Canon EOS 1500D DSLR Camera',42999,'fa-solid fa-shopping-bag')"></i>
+                    </div>
+                    <p class="product_name">Canon EOS 1500D <br>DSLR Camera</p>
+                    <div class="product_p_c">
+                        <p  class="product_price">price:₹42999</p>
+                        <i class="fa-solid fa-shopping-bag" onclick="addToCart('canon-camera.png','Canon EOS 1500D DSLR Camera',42999)"></i>
+                    </div>
+                </div>
+                <div id="p24" class="product">
+                    <div class="product_img_div">
+                        <img src="drone.png" class="product_imgs">
+                        <i class="fa-solid fa-heart" onclick="addToWishlist('drone.png','Divine creation A7 Pro GPS Drone',8999,'fa-solid fa-shopping-bag')"></i>
+                    </div>
+                    <p class="product_name">Divine creation A7 <br>Pro GPS Drone </p>
+                    <div class="product_p_c">
+                        <p  class="product_price">price:₹8999</p>
+                        <i class="fa-solid fa-shopping-bag" onclick="addToCart('drone.png','Divine creation A7 Pro GPS Drone',8999)"></i>
+                    </div>
+                </div>
+            </section>
+            <section id="home-appliances">
+                <p class="section-names">Home Appliances</p>
+                <div class="wears">
+                <div id="p25" class="product">
+                    <div class="product_img_div">
+                        <img src="philips-tv.png" class="product_imgs">
+                        <i class="fa-solid fa-heart" onclick="addToWishlist('philips-tv.png','PHILIPS 189 cm (75 inch) Ultra HD Tv',69999,'fa-solid fa-shopping-bag')"></i>
+                    </div>
+                    <p class="product_name">PHILIPS 189 cm <br>(75 inch) Ultra HD Tv</p>
+                    <div class="product_p_c">
+                        <p  class="product_price">price:₹69999</p>
+                        <i class="fa-solid fa-shopping-bag" onclick="addToCart('philips-tv.png','PHILIPS 189 cm (75 inch) Ultra HD Tv',69999)"></i>
+                    </div>
+                </div>
+                <div id="p26" class="product">
+                    <div class="product_img_div">
+                        <img src="refrigerator.png" class="product_imgs">
+                        <i class="fa-solid fa-heart" onclick="addToWishlist('refrigerator.png','Samsung 183 L Single Door Refrigerator',15999,'fa-solid fa-shopping-bag')"></i>
+                    </div>
+                    <p class="product_name">Samsung 183 L Single Door Refrigerator</p>
+                    <div class="product_p_c">
+                        <p  class="product_price">price:₹15999</p>
+                        <i class="fa-solid fa-shopping-bag" onclick="addToCart('refrigerator.png','Samsung 183 L Single Door Refrigerator',15999)"></i>
+                    </div>
+                </div>
+                <div id="p27" class="product">
+                    <div class="product_img_div">
+                        <img src="washing-machine.png" class="product_imgs">
+                        <i class="fa-solid fa-heart" onclick="addToWishlist('washing-machine.png','Whirlpool 7 kg Top Load Washing  Machine ',13999,'fa-solid fa-shopping-bag')"></i>
+                    </div>
+                    <p class="product_name">Whirlpool 7 kg Top Load Washing  Machine </p>
+                    <div class="product_p_c">
+                        <p  class="product_price">price:₹13999</p>
+                        <i class="fa-solid fa-shopping-bag" onclick="addToCart('washing-machine.png','Whirlpool 7 kg Top Load Washing  Machine ',13999)"></i>
+                     </div>
+                </div>
+                <div id="p28" class="product">
+                    <div class="product_img_div">
+                        <img src="microwave-oven.png" class="product_imgs">
+                        <i class="fa-solid fa-heart" onclick="addToWishlist('microwave.png','Panasonic 20 L Microwave Oven',4999,'fa-solid fa-shopping-bag')"></i>
+                    </div>
+                    <p class="product_name">Panasonic 20 L <br>Microwave Oven</p>
+                    <div class="product_p_c">
+                        <p  class="product_price">price:₹4999</p>
+                        <i class="fa-solid fa-shopping-bag" onclick="addToCart('ear-buds.png','Panasonic 20 L Microwave Oven',4999)"></i>
+                    </div>
+                </div>
+                <div id="p29" class="product">
+                    <div class="product_img_div">
+                        <img src="mixer-grainder.png" class="product_imgs">
+                        <i class="fa-solid fa-heart" onclick="addToWishlist('mixer-grainder.png','Butterfly Arrow 500 W Juicer Mixer Grinder ',2199,'fa-solid fa-shopping-bag')"></i>
+                    </div>
+                    <p class="product_name">Butterfly Arrow 500 W Juicer Mixer Grinder </p>
+                    <div class="product_p_c">
+                        <p  class="product_price">price:₹2199</p>
+                        <i class="fa-solid fa-shopping-bag" onclick="addToCart('mixer-grainder.png','Butterfly Arrow 500 W Juicer Mixer Grinder ',2199)"></i>
+                    </div>
+                </div>
+                <div id="p30" class="product">
+                    <div class="product_img_div">
+                        <img src="ceiling-fan.png" class="product_imgs">
+                        <i class="fa-solid fa-heart" onclick="addToWishlist('ceiling-fan.png','GESTOR ALTROZ Ultra High Speed Ceiling Fan',999,'fa-solid fa-shopping-bag')"></i>
+                    </div>
+                    <p class="product_name">GESTOR ALTROZ Ultra High Speed Ceiling Fan</p>
+                    <div class="product_p_c">
+                        <p  class="product_price">price:₹999</p>
+                        <i class="fa-solid fa-shopping-bag" onclick="addToCart('ceiling-fan.png','GESTOR ALTROZ Ultra High Speed Ceiling Fan',999)"></i>
+                    </div>
+                </div>
+            </section>
+            <section id="toys&games">
+                <p class="section-names">Toys & Games</p>
+                <div class="wears">
+                <div id="p31" class="product">
+                    <div class="product_img_div">
+                        <img src="remote-controll-car.png" class="product_imgs">
+                        <i class="fa-solid fa-heart" onclick="addToWishlist('remote-controll-car.png','Flytek RC Drift Remote Control Car',2499,'fa-solid fa-shopping-bag')"></i>
+                    </div>
+                    <p class="product_name">Flytek RC Drift Remote Control Car</p>
+                    <div class="product_p_c">
+                        <p  class="product_price">price:₹2499</p>
+                        <i class="fa-solid fa-shopping-bag" onclick="addToCart('remote-controll-car.png','Flytek RC Drift Remote Control Car',2499)"></i>
+                    </div>
+                </div>
+                <div id="p32" class="product">
+                    <div class="product_img_div">
+                        <img src="remote-control-helicopter.png" class="product_imgs">
+                        <i class="fa-solid fa-heart" onclick="addToWishlist('remote-control-helicopter.png','Bell Essence V-Max Remote Control Helicopter',2699,'fa-solid fa-shopping-bag')"></i>
+                    </div>
+                    <p class="product_name">Bell Essence V-Max Remote Control Helicopter</p>
+                    <div class="product_p_c">
+                        <p  class="product_price">price:₹2699</p>
+                        <i class="fa-solid fa-shopping-bag" onclick="addToCart('remote-control-helicopter.png','Bell Essence V-Max Remote Control Helicopter',2699)"></i>
+                    </div>
+                </div>
+                <div id="p33" class="product">
+                    <div class="product_img_div">
+                        <img src="rolls-royce.png" class="product_imgs">
+                        <i class="fa-solid fa-heart" onclick="addToWishlist('rolls-royce.png','Ublgift Rolls-Royce Car',999,'fa-solid fa-shopping-bag')"></i>
+                    </div>
+                    <p class="product_name">Ublgift Rolls-Royce <br>Car</p>
+                    <div class="product_p_c">
+                        <p  class="product_price">price:₹999</p>
+                        <i class="fa-solid fa-shopping-bag" onclick="addToCart('rolls-royce.png','Ublgift Rolls-Royce Car',999)"></i>
+                     </div>
+                </div>
+                <div id="p34" class="product">
+                    <div class="product_img_div">
+                        <img src="cactus.png" class="product_imgs">
+                        <i class="fa-solid fa-heart" onclick="addToWishlist('cactus.png','Dancing Cactus Talking Singing Toy ',499,'fa-solid fa-shopping-bag')"></i>
+                    </div>
+                    <p class="product_name">Dancing Cactus Talking Singing Toy </p>
+                    <div class="product_p_c">
+                        <p  class="product_price">price:₹499</p>
+                        <i class="fa-solid fa-shopping-bag" onclick="addToCart('cactus.png','Dancing Cactus Talking Singing Toy ',499)"></i>
+                    </div>
+                </div>
+                <div id="p35" class="product">
+                    <div class="product_img_div">
+                        <img src="sup-game-player.png" class="product_imgs">
+                        <i class="fa-solid fa-heart" onclick="addToWishlist('sup-game-player.png','SUP GAME 400 in 1 Retro Game Player',699,'fa-solid fa-shopping-bag')"></i>
+                    </div>
+                    <p class="product_name">SUP GAME 400 in 1 Retro Game Player</p>
+                    <div class="product_p_c">
+                        <p  class="product_price">price:₹699</p>
+                        <i class="fa-solid fa-shopping-bag" onclick="addToCart('sup-game-player.png','SUP GAME 400 in 1 Retro Game Player',699)"></i>
+                    </div>
+                </div>
+                <div id="p36" class="product">
+                    <div class="product_img_div">
+                        <img src="playtastic-gaming-console.png" class="product_imgs">
+                        <i class="fa-solid fa-heart" onclick="addToWishlist('playtastic-gaming-console.png','Playtastic Retro Handheld Game Console',6999,'fa-solid fa-shopping-bag')"></i>
+                    </div>
+                    <p class="product_name">Playtastic Retro Handheld Game Console</p>
+                    <div class="product_p_c">
+                        <p  class="product_price">price:₹6999</p>
+                        <i class="fa-solid fa-shopping-bag" onclick="addToCart('playtastic-gaming-console.png','Playtastic Retro Handheld Game Console',6999)"></i>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </main>
+    <footer>
+        © 2026 Style Mart | Privacy Policy | Terms of Service
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
